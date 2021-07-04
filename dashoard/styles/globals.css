@@ -1,0 +1,72 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    background: #f4f5f7;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+[draggable="true"] {
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+[draggable="true"]:active {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.app {
+  display: flex;
+  background: transparent;
+}
+.app--grab [draggable="true"] {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+.app--progress * {
+  cursor: move;
+}
+
+.area {
+  
+  display: block;
+  border: 2px solid #fff;
+  min-height: 400px;
+  width: 25%;
+  margin: 10px;
+  background : #b0b6e8b3;
+  position: relative;
+  padding: 20px 10px;
+}
+.area__label {
+  position: absolute;
+  background: #222;
+  color : white;
+  height: 25px;
+  font-size: 20px;
+  line-height: 20px;
+  border-radius: 5%;
+  top: -10px;
+  padding: 0 20px;
+  left: 10px;
+}
+.card {
+  color: greenyellow;
+  background: white;
+  border-left: 12px solid;
+  line-height: 50px;
+  padding-left: 20px;
+  margin: 0 0 10px;
+    border-radius: 5%;
+}
