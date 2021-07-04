@@ -32,6 +32,13 @@ class StatusSection extends React.Component {
 
       data = JSON.parse(JSON.stringify(data))
 
+      /* here we can make post api call to update ticket status
+      as per label as status of box in which card is dragged
+       in place static data manipulation */
+    
+      /* If drag is in same box, we will check current status and label
+      of new status box, then we will make post call to update priority */
+
       Object.keys(data).forEach(key => {
         const cards = data[key] || []
         const idx = cards.indexOf(text)
@@ -44,6 +51,9 @@ class StatusSection extends React.Component {
       this.setState({ data, dndState: '' })
     })
   }
+
+  /* OnComponentDidMount : here we can call api to fetch all tasks and add them 
+  in state - >data  object  by filtering with status*/
 
   render () {
     const { value } = this.props || {}
